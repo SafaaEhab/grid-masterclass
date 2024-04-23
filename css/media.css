@@ -1,0 +1,60 @@
+@media screen and (min-width:768px) {
+
+    /* IPHONE 6S */
+    div.iphone-6 div {
+        width: 30%;
+    }
+
+    /* IPHONE 6S */
+    /* transparent */
+    div.transparent .image,
+    div.orange .image,
+    div.imac .image {
+        width: 55%;
+    }
+
+    div.learn-more h1 {
+        width: 60%;
+    }
+
+    /* transparent */
+}
+
+@media screen and (min-width:1024px) {
+    div.container {
+        grid-template-areas:
+            "iphone iphone learn learn"
+            "orenge imac imac popular"
+            "transparent ux ux  popular"
+            "twitter white old old"
+        ;
+        grid-template-columns: 1fr 1fr 1fr 25%;
+        /* grid-template-rows: repeat(3,auto) 0.5fr; */
+    }
+
+    /* IPHONE 6S */
+    div.iphone-6 div {
+        width: 40%;
+    }
+
+    /* IPHONE 6S */
+    /* transparent */
+    div.transparent h2 {
+        width: 100%;
+    }
+
+    /* transparent */
+}
+
+@media screen and (min-width:1280px) {
+    div.learn-more h1 {
+        width: 55%;
+    }
+
+    /* IPHONE 6S */
+    div.iphone-6 div {
+        width: 30%;
+    }
+
+    /* IPHONE 6S */
+}

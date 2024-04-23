@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+}
+
+/* ----------------- */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ----------------- */
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "learn learn learn learn"
+        "iphone iphone iphone iphone"
+        "orenge orenge transparent transparent"
+        "imac imac imac imac"
+        "twitter twitter popular popular"
+        "twitter twitter popular popular"
+        "ux ux popular popular"
+        "ux ux popular popular"
+        "white white white white"
+        "old old old old"
+    ;
+    grid-template-columns: repeat(3, 1fr) 25%;
+    /* grid-template-rows: repeat(2, auto) 1fr 1fr repeat(6, auto); */
+}
+
+/* learn more */
+.container .learn-more {
+    background-color: #f7f8f9;
+    padding-block: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: learn;
+}
+
+.learn-more .content {
+    padding-block: 20px;
+    overflow: hidden;
+}
+
+.learn-more span,
+.iphone-6 span,
+.imac span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #9fa3a7;
+}
+
+.learn-more h1 {
+    font-family: "Arvo", serif;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin: 20px auto;
+    max-width: 95%;
+}
+
+.learn-more a {
+    color: #27b9c2;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-block: 10px;
+}
+
+/* learn more */
+
+/* IPHONE 6S */
+.iphone-6 {
+    grid-area: iphone;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.iphone-6 div {
+    width: 45%;
+    padding-top: 20px;
+}
+
+.iphone-6 .content h2,
+.imac h2 {
+    margin-block: 10px;
+    font-family: 'Arvo', sans-serif;
+    font-size: 1.8rem;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.iphone-6 .content p {
+    color: #9fa3a7;
+    font-size: 1.1rem;
+}
+
+.iphone-6 .img img {
+    width: 100%;
+}
+
+.iphone-6 .blur{
+    position: absolute;
+    top: 100%;
+    background-color: #2c2c2c8c;
+    color: #f7f8f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.9s linear;
+}
+
+.iphone-6:hover .blur{
+    top: 30%;
+    width: 100%;
+}
+
+.blur button{
+    background-color: #7bc424;
+    margin-block: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+}
+
+.blur button:hover{
+    background-color: #7cc424a7;
+}
+
+/* IPHONE 6S */
+/* orange */
+.orange {
+    grid-area: orenge;
+    background-color: #f05638;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.orange .image,
+.transparent .image,
+.transparent img,
+.imac .image,
+.imac img,
+.orange img {
+    width: 100%;
+}
+
+.orange h2 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Arvo', sans-serif;
+    max-width: 90%;
+}
+
+.orange a,
+.transparent a {
+    color: #ffc80a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+}
+
+/* orange */
+/* transparent */
+.transparent {
+    grid-area: transparent;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.transparent h2 {
+    width: 54%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Arvo', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-block: 10px;
+}
+
+.transparent a {
+    color: #27b9c2;
+}
+
+/* transparent */
+
+/* IMAC.RETINA */
+.imac {
+    grid-area: imac;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.imac .image{
+    position: relative;
+    top: 10px;
+}
+
+.imac div {
+    width: 35%;
+    padding-top: 25px;
+}
+
+
+.imac p {
+    color: #9fa3a7;
+    line-height: 1.6;
+    padding-block: 5px;
+}
+
+.imac a {
+    display: inline-block;
+    color: #27b9c2;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* IMAC.RETINA */
+/* twitter */
+.twitter {
+    grid-area: twitter;
+    padding-block: 20px;
+    background-color: #35cfed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.twitter .redius {
+    margin-block: 20px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #9fa3a732;
+    padding-block: 20px;
+    color: #f7f8f9;
+}
+
+.twitter .image {
+    margin-block: 10px;
+}
+
+.twitter .image img {
+    width: 30%;
+    margin-block: 10px;
+    animation: shake 2s ease-in-out infinite;
+}
+
+.twitter h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+@keyframes shake {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+
+    10% {transform: translate(-1px, -2px) rotate(-1deg);}
+
+    20% {transform: translate(-3px, 0px) rotate(1deg);}
+
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(0deg);
+    }
+
+}
+
+
+
+/* twitter */
+/* best */
+.best {
+    grid-area: ux;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #93b6b7;
+    color: #fff;
+    text-align: center;
+}
+
+.position {
+    position: relative;
+    width: 100%;
+    margin-block: 20px;
+}
+
+.best .choise {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #fa684f;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.best .head h2 {
+    max-width: 280px;
+    font-family: "Arvo", serif;
+    margin-block: 20px;
+}
+
+.best .image {
+    width: 90%;
+    padding-top: 10px;
+    background-image: url(../uploads/UX.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.best img {
+    width: 75%;
+    position: relative;
+    top: 7px;
+}
+
+/* best */
+
+/* popular */
+.popular {
+    grid-area: popular;
+    background-color: #8f76bc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.popular .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 373px;
+    height: 373px;
+    background-color: #8166b0;
+    border-radius: 50%;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.popular .shape {
+    background: hsla(0, 0%, 100%, .08);
+    width: 30%;
+    margin-block: 20px;
+    border-radius: 25px;
+}
+
+.shape div {
+    background-image: url(../uploads/Shape.png);
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 12px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+}
+
+.circle span {
+    font-family: Montserrat, sans-serif;
+}
+
+.popular .image {
+    width: 65%;
+}
+
+.popular .image img {
+    width: 100%;
+}
+
+.popular .content {
+    width: 80%;
+    margin-block: 10px;
+    color: #fff;
+}
+
+.popular h2 {
+    font-family: "Arvo", serif;
+    margin-block: 5px;
+}
+
+.popular button {
+    margin-block: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    background: #ffc80a;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+}
+
+.popular button:hover{
+    background-color: #a78200;
+}
+
+/* popular */
+/* white */
+.white {
+    grid-area: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.white .w-popular {
+    padding: 0px 15px;
+    background: #7bc424;
+    border-radius: 10px;
+    color: #fff;
+    margin-block: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.w-popular p{
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.white h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    max-width: 70%;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+/* white */
+/* old */
+.old{
+    grid-area: old;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2c2c2c;
+    color: #f7f8f9;
+    text-align: center;
+}
+
+.old h2{
+    font-family: "Arvo", sans-serif;
+    font-weight: 400;
+    max-width: 75%;
+}
+
+.old div{
+    width: 45%;
+}
+
+.old img{
+    width: 100%;
+}
+/* old */
